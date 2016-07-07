@@ -1,0 +1,90 @@
+#{extends 'main.html' /} #{set title:'Home' /}
+
+<nav class="ui inverted menu">
+	<a class="ui active item" href="/home">Home</a> <a class="ui item"
+		href="/members">Members</a> <a class="ui item" href="/profile">Profile</a><a
+		class="ui item" href="/leaderboard">Leaderboard</a> <a class="ui item"
+		href="/login">Logout</a>
+</nav>
+<section class="ui inverted blue segment">
+	<h2 class="ui header">Home page for ${user.firstName}
+		${user.lastName}</h2>
+	<div class="ui three column grid segment">
+		<div class="ui column" style="width: 25%">
+			<h2>Personal Details</h2>
+			<hr>
+			<p>First name: ${user.firstName}</p>
+			<p>Last name: ${user.lastName}</p>
+			<p>Age: ${user.age}</p>
+			<p>Nationality: ${user.nationality}</p>
+			<form action="home/changedetails" method="get">
+				<input class="ui blue button" type="submit" name="submit"
+					value="Change Details" />
+			</form>
+		</div>
+		<div class="ui column" style="width: 25%">
+			<h2>Friends (${user.friendships.size()})</h2>
+			<hr>
+			<div class="ui list">
+				#{list items:user.friendships, as:'friendship'}
+				<div class="item">
+					<i class="right triangle icon"></i>
+					<div class="content">
+						<a href="/publicprofile/${friendship.targetUser.id}"> <Strong>${friendship.targetUser.firstName}</Strong>
+							<Strong>${friendship.targetUser.lastName}</Strong></a> (<a
+							href="/home/drop/${friendship.targetUser.id}"> drop </a>)
+						<p>
+							<img src="/profile/getpicture/${friendship.targetUser.id}"
+								height="120" width="120">
+						</p>
+						<div class="ui green block label">
+							<p>${friendship.targetUser.statusText}</p>
+						</div>
+					</div>
+				</div>
+				#{/list}
+			</div>
+		</div>
+		<div class="ui column" style="width: 50%">
+			<h2>Messages sorted by Date</h2>
+			<hr>
+			<div class="ui list">
+				#{list items:user.inbox, as:'message'}
+				<div class="item">
+					<table border="5" width="100%">
+						<tr>
+							<th width="10%">Sender:</th>
+							<th width="20%">Subject:</th>
+							<th width="80%">Message:</th>
+						</tr>
+						<tr>
+							<td><a href="/publicprofile/${message.from.id}">${message.from.firstName}</a>
+								<p>
+									<img src="/profile/getpicture/${message.from.id}" height="120"
+										width="120">
+								</p></td>
+							<td><div align="center">${message.subject}</div></td>
+							<td><div align="center">${message.messageText}</div></td>
+						</tr>
+					</table>
+				</div>
+				#{/list}
+				<h3>Sort by:</h3>
+				<div class="ui three buttons">
+					<form action="/dateSort" method="get">
+						<input class="ui active blue button" type="submit" name="submit"
+							value="Date" />
+					</form>
+					<form action="/nameSort" method="get">
+						<input class="ui blue button" type="submit" name="submit"
+							value="User" />
+					</form>
+					<form action="/conversationSort" method="get">
+						<input class="ui blue button" type="submit" name="submit"
+							value="Conversation" />
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

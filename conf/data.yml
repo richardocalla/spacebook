@@ -1,0 +1,357 @@
+User(homer):
+    firstName: Homer
+    lastName: Simpson
+    age: 39
+    nationality: American
+    email: homer@simpson.com
+    statusText: im off to moes!
+    password: secret
+
+User(marge):
+    firstName: Marge
+    lastName: Simpson
+    age: 34
+    nationality: American
+    statusText: Homer you better not be going to moes!
+    email: marge@simpson.com
+    password: secret
+
+User(bart):
+    firstName: Bart
+    lastName: Simpson
+    age: 10
+    nationality: American
+    statusText: im Bart Simpson, who the hell are you?!
+    email: bart@simpson.com
+    password: secret
+
+User(lisa):
+    firstName: Lisa
+    lastName: Simpson
+    age: 8
+    nationality: American
+    statusText: Bart! Where did you put my saxophone!
+    email: lisa@simpson.com
+    password: secret
+
+User(maggie):
+    firstName: Maggie
+    lastName: Simpson
+    age: 1
+    nationality: American
+    statusText: .......
+    email: maggie@simpson.com
+    password: secret
+
+User(ned):
+    firstName: Ned
+    lastName: Flanders
+    age: 60
+    nationality: American
+    statusText: What the darn-diddly-doodily did you just say?
+    email: ned@flanders.com
+    password: secret
+    
+User(barney):
+    firstName: Barney
+    lastName: Gumble
+    age: 40
+    nationality: American
+    statusText: been sixty seconds since my last beer. too long if you ask me...
+    email: barney@gumble.com
+    password: secret
+    
+User(moe):
+    firstName: Moe
+    lastName: Szyslak
+    age: 50
+    nationality: American
+    statusText: I've been called ugly, pug ugly, fugly, pug fugly, but never ugly ugly.
+    email: moe@szyslak.com
+    password: secret
+    
+User(milhouse):
+    firstName: Milhouse
+    lastName: Van Houten
+    age: 10
+    nationality: American
+    statusText: Everything's coming up Milhouse!
+    email: milhouse@vanhouten.com
+    password: secret
+    
+Message(message1):
+    from : marge
+    to   : homer
+    subject: 'Hey!!!'
+    messageText: 'how are things going? I need you to run a few errands today'
+    postedAt: 2016-05-15t12:20:25.05
+    
+Message(message2):
+    from : lisa
+    to   : homer
+    subject: 'Dad!'
+    messageText: 'Get me outta here!'
+    postedAt: 2016-05-15t14:20:45.05
+    
+Message(message3):
+    from : bart
+    to   : homer
+    subject: 'Ha ha!'
+    messageText: 'got an F in my exam today oh well that life!'
+    postedAt: 2016-05-15t18:25:45.05
+    
+Message(message4):
+    from : moe
+    to   : homer
+    subject: 'Bar?'
+    messageText: 'When you coming to the bar?'
+    postedAt: 2016-05-15t21:21:45.05
+    
+Message(message5):
+    from : moe
+    to   : homer
+    subject: 'Bar???'
+    messageText: 'I need your business!'
+    postedAt: 2016-05-15t21:22:45.05
+    
+Message(message6):
+    from : homer
+    to   : marge
+    subject: 'Hey hey'
+    messageText: 'Whats the story!'
+    postedAt: 2016-05-15t21:30:45.05
+    
+Message(message7):
+    from : marge
+    to   : homer
+    subject: 'Groceries'
+    messageText: 'Do not forget to pick up the groceries on the way home from work!'
+    postedAt: 2016-05-15t22:30:45.05
+    
+Message(message8):
+    from : homer
+    to   : marge
+    subject: 'Groceries'
+    messageText: 'sure i will'
+    postedAt: 2016-05-15t22:32:45.05
+
+Message(message9):
+    from : homer
+    to   : barney
+    subject: 'Bar'
+    messageText: 'will be late to the bar barney my wife wants me to pick up the stupid groceries'
+    postedAt: 2016-05-15t22:49:45.05
+
+Message(message10):
+    from : moe
+    to   : barney
+    subject: 'Homer'
+    messageText: 'ah no. Homer has to pick up the stupid groceries'
+    postedAt: 2016-05-15t22:55:45.05
+
+Message(message11):
+    from : milhouse
+    to   : homer
+    subject: 'Bart'
+    messageText: 'is bart still grounded?'
+    postedAt: 2016-05-15t17:55:45.05
+
+Message(message12):
+    from : moe
+    to   : homer
+    subject: 'Bart'
+    messageText: 'if bart prank calls me one more time...'
+    postedAt: 2016-05-15t19:55:45.05
+
+Message(message13):
+    from : barney
+    to   : homer
+    subject: 'Okay'
+    messageText: 'thats okay homer you will know where to find me'
+    postedAt: 2016-05-15t22:49:48.05
+
+Message(message14):
+    from : homer
+    to   : moe
+    subject: 'on my way'
+    messageText: 'on my way moe! gotta pick up stupid groceries for my wife'
+    postedAt: 2016-05-15t22:49:48.05
+  
+Message(message15):
+    from : moe
+    to   : homer
+    subject: 'you better'
+    messageText: 'barney isnt great company to be honest'
+    postedAt: 2016-05-15t22:55:48.05
+
+Friendship(friend1):
+    sourceUser: homer
+    targetUser: marge
+    
+Friendship(friend2):
+    sourceUser: homer
+    targetUser: lisa
+    
+Friendship(friend3):
+    sourceUser: homer
+    targetUser: bart
+    
+Friendship(friend4):
+    sourceUser: homer
+    targetUser: maggie
+    
+Friendship(friend5):
+    sourceUser: homer
+    targetUser: moe
+    
+Friendship(friend6):
+    sourceUser: homer
+    targetUser: barney
+    
+Friendship(friend7):
+    sourceUser: homer
+    targetUser: ned
+    
+Friendship(friend8):
+    sourceUser: homer
+    targetUser: milhouse
+
+Friendship(friend9):
+    sourceUser: marge
+    targetUser: bart
+    
+Friendship(friend10):
+    sourceUser: marge
+    targetUser: lisa
+
+Friendship(friend11):
+    sourceUser: marge
+    targetUser: maggie
+    
+Friendship(friend12):
+    sourceUser: moe
+    targetUser: bart
+    
+Friendship(friend13):
+    sourceUser: moe
+    targetUser: marge
+    
+Friendship(friend14):
+    sourceUser: moe
+    targetUser: barney
+    
+Friendship(friend15):
+    sourceUser: bart
+    targetUser: milhouse
+
+Friendship(friend16):
+    sourceUser: moe
+    targetUser: milhouse
+
+User(homer):
+    firstName: Homer
+    lastName: Simpson
+    age: 39
+    nationality: American
+    statusText: im off to moes!
+    email: homer@simpson.com
+    password: secret
+    friendships:
+                -friend1
+                -friend2
+                -friend3
+                -friend4
+                -friend5
+                -friend6
+                -friend7
+                -friend8
+
+User(marge):
+    firstName: Marge
+    lastName: Simpson
+    age: 34
+    nationality: American
+    statusText: Homer you better not be going to moes!
+    email: marge@simpson.com
+    password: secret
+    friendships:
+                -friend1
+                -friend9
+                -friend10
+                -friend11
+
+User(bart):
+    firstName: Bart
+    lastName: Simpson
+    age: 10
+    nationality: American
+    statusText: im Bart Simpson, who the hell are you?!
+    email: bart@simpson.com
+    password: secret
+    friendships:
+                -friend15
+    
+User(lisa):
+    firstName: Lisa
+    lastName: Simpson
+    age: 8
+    nationality: American
+    statusText: Bart! Where did you put my saxophone!
+    email: lisa@simpson.com
+    password: secret
+    friendships:
+    
+User(maggie):
+    firstName: Maggie
+    lastName: Simpson
+    age: 1
+    nationality: American
+    statusText: .......
+    email: maggie@simpson.com
+    password: secret
+    friendships:
+                
+User(ned):
+    firstName: Ned
+    lastName: Flanders
+    age: 60
+    nationality: American
+    statusText: What the darn-diddly-doodily did you just say?
+    email: ned@flanders.com
+    password: secret
+    friendships:
+
+User(barney):
+    firstName: Barney
+    lastName: Gumble
+    age: 40
+    nationality: American
+    statusText: been sixty seconds since my last beer. too long if you ask me...
+    email: barney@gumble.com
+    password: secret
+    friendships:
+    
+User(moe):
+    firstName: Moe
+    lastName: Szyslak
+    age: 50
+    nationality: American
+    statusText: I've been called ugly, pug ugly, fugly, pug fugly, but never ugly ugly.
+    email: moe@szyslak.com
+    password: secret
+    friendships:
+                -friend5
+                -friend12
+                -friend13
+                -friend14
+                -friend16
+    
+User(milhouse):
+    firstName: Milhouse
+    lastName: Van Houten
+    age: 10
+    nationality: American
+    statusText: Everything's coming up Milhouse!
+    email: milhouse@vanhouten.com
+    password: secret
+    friendships:

@@ -1,0 +1,33 @@
+#{extends 'main.html' /} #{set title:'Leaderboard' /}
+
+<nav class="ui inverted menu">
+	<a class="ui item" href="/home">Home</a> <a class="ui item"
+		href="/members">Members</a> <a class="ui item" href="/profile">Profile</a><a
+		class="ui active item" href="/leaderboard">Leaderboard</a> <a
+		class="ui item" href="/login">Logout</a>
+</nav>
+<section class="ui segment">
+	<h2 class="ui header">Social Leaderboard</h2>
+	<div class="ui column">
+		<hr>
+		<ol class="ui list">
+			#{list items:users, as:'user'}
+			<li><strong>${user.firstName} ${user.lastName}</strong>
+				<p>
+					Friends: (${user.friendships.size()})<i class="users icon"></i>
+					Outbox: (${user.outbox.size()})<i class="comments outline icon"></i>
+				</p></li> #{/list}
+		</ol>
+	</div>
+	<br>
+	<div class="ui two buttons">
+		<form action="/socialSort" method="get">
+			<input class="ui blue button" type="submit" name="submit"
+				value="Most Social" />
+		</form>
+		<form action="/talkativeSort" method="get">
+			<input class="ui blue button" type="submit" name="submit"
+				value="Most Talkative" />
+		</form>
+	</div>
+</section>
